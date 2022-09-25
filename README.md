@@ -10,7 +10,7 @@ Como apresentado anteriormente, percebemos que os estudantes tem grande dificuld
 
 ## Professores responsáveis
 
-* Rommel carneiro
+* Rommel Carneiro
 
 ## Instruções de utilização
 
