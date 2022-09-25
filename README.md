@@ -1,18 +1,16 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=8572100&assignment_repo_type=AssignmentRepo)
-# Nome do projeto
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+# Encontrar pessoas para esportes
+Como apresentado anteriormente, percebemos que os estudantes tem grande dificuldade em encontrar pessoas com os mesmos interesses esportivos, sendo assim, nosso site visa conectar as pessoas com as mesmas predileções.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Lucas Gabriel Almeida Gomes
+* Thiago Antônio Silva
+* Caio Faria Diniz
+* Kenia Teixeira de Paula Costa
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Rommel carneiro
 
 ## Instruções de utilização
 
