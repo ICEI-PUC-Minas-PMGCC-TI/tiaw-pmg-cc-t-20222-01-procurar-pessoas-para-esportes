@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go Play - Horários</title>
+  <script type="text/javascript" src="qh.js"></script>
+
+
+  <!--estilo da reserva de quadras-->
+  <style>
+    #listaQuadras {
+      display: block;
+      padding: 1px;
+      margin: 50px;
+      margin-bottom: 0px;
+    }
+
+    #cadastroQuadras {
+      display: none;
+    }
+
+    body[page=lista] #listaQuadras {
+      display: block;
+    }
+
+    body[page=cadastro] #cadastroQuadras {
+      display: block;
+    }
+
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table th,
+    table td {
+      font-size: 14px;
+      padding: 10px 15px;
+      border: solid 1px #ccc;
+    }
+
+    button {
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    button.azul {
+      background-color: rgba(123, 123, 146, 0.625);
+    }
+
+    button:hover {
+      opacity: 0.5;
+    }
+
+    input {
+      border: solid 1px rgb(135, 133, 133);
+      border-radius: 3px;
+      padding: 5px;
+    }
+
+    #cadastroQuadras {
+      padding-left: 50px;
+      flex-direction: column;
+      gap: 1px;
+      font-size: 15px;
+    }
+
+    select {
+      font-size: 15px;
+    }
+  </style>
+
+  <!--estilo do cabeçalho-->
+
+  <style>
+    * {
+      margin: 4px;
+      padding: 0;
+      background-color: #e5e9f2;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    ul {
+      list-style: none;
+
+    }
+
+    .cabecalho {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .conteiner {
+      display: flex;
+      padding-right: 30px;
+      justify-content: space-between;
+
+    }
+
+    .conteiner ul {
+      display: flex;
+
+    }
+
+    .conteiner li {
+      display: flex;
+      padding-right: 30px;
+    }
+
+    .lateral ul {
+      top: 70px;
+      position: absolute;
+      background-color: white;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+
+    }
+
+    input[type="checkbox"]:checked~nav {
+      transform: translateX(350px);
+
+    }
+
+    .lateral nav {
+      background-color: white;
+      position: absolute;
+      left: -350px;
+      width: 350px;
+      height: 100%;
+      transition: all .5s;
+    }
+
+    .lateral a {
+      background-color: white;
+      display: block;
+      padding-left: 120px;
+    }
+
+    .lateral label {
+      z-index: 1;
+      padding-left: 15px;
+      padding-top: 15px;
+
+    }
+
+    .lateral li {
+      padding-top: 35px;
+      background-color: white;
+    }
+
+
+
+
+    @media screen and (max-width: 800px) {
+      .conteiner {
+        display: none;
+      }
+    }
+  </style>
+
+  <!--estilo do footer-->
+
+  <style>
+    .footer {
+      background: rgb(200, 204, 211);
+      color: black;
+      text-align: center;
+      padding: 30px;
+      margin-top: 180px;
+      margin-bottom: auto;
+      position: static;
+    }
+
+    h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+
+
+<body>
+  <header class="cabecalho">
+    <aside class="lateral">
+      <input id="check" type="checkbox">
+      <label for="check">
+        <img src="../imgs/hamimg.png" alt="">
+      </label>
+      <nav>
+
+        <ul class="nav-list">
+
+          <li><a href="../caio/perfil.html"><img height="120px" width="120px" src="../imgs/imgbrlt.png" alt="img"></a>
+          </li>
+          <li><a href="../caio/amigos.html" class="li-amigos">Amigos</a></li>
+          <li><a href="../kenia/mapa.html" class="li-mapa">Mapa</a></li>
+          <li><a href="../lucas/cg.html" class="li-cp">Criar Grupo</a></li>
+          <li><a href="../kenia/qh.html" class="li-qh">Quadro de horários</a></li>
+          <li><a href="../thiago/n.html" class="li-not">Notificações</a></li>
+        </ul>
+
+      </nav>
+    </aside>
+    <div class="conteiner">
+      <ul>
+        <li> <a href="../index.htmll"><img height="70px" width="60px" src="../imgs/imginicio.png" alt=""></a>
+        </li>
+        <li> <a href="../caio/amigos.html"><img height="70px" width="60px" src="../imgs/amigosimg.png" alt=""></a></li>
+        <li> <a href="../lucas/grupos.html"><img height="70px" width="60px" src="../imgs/gruposimg.png" alt=""></a></li>
+        <li> <a href="../caio/perfil.html"><img height="70px" width="60px" src="../imgs/perfilimg.png" alt=""></a></li>
+      </ul>
+    </div>
+
+  </header>
+
+  <main>
+    <h1>
+      <p> Horário de Funcionamento das Quadras</p>
+    </h1>
+    <p> Segunda à Sexta: 07:00 às 22:00
+      Sábados: 07:00 às 16:30 </p>
+
+    <!-- Reservar quadras-->
+    <div page="lista">
+
+      <div id="listaQuadras">
+        <table>
+          <thead>
+            <tr>
+              <th>Dia</th>
+              <th>Horário</th>
+              <th>Quadra</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="listaRegistrosBody"></tbody>
+        </table>
+
+        <div>
+          <button onclick="vizualizar('cadastro')">RESERVAR</button>
+        </div>
+
+      </div>
+
+
+      <form id="cadastroQuadras">
+
+        <div class="label">
+          <div>Dia</div>
+          <div>
+            <input type="date" id="Dia">
+          </div>
+        </div>
+
+        <div class="label">
+          <div>Horário</div>
+          <div>
+            <input type="time" id="Horário">
+          </div>
+        </div>
+
+        <div class="label">
+          <div>Quadra</div>
+          <div>
+            <select id="Quadra">
+              <Option> Quadra 1- Basquete </Option>
+              <Option> Quadra 2- Basquete </Option>
+              <Option> Quadra 3- Basquete </Option>
+              <Option> Quadra 4- Futebol </Option>
+              <Option> Quadra 5- Futebol </Option>
+              <Option> Quadra 6- Futebol </Option>
+              <Option> Quadra 7- Vôlei </Option>
+              <Option> Quadra 8- Vôlei </Option>
+              <Option> Quadra 9- Campo </Option>
+            </select>
+
+          </div>
+        </div>
+
+        <div>
+          <button>SALVAR</button>
+          <button onclick="vizualizar('lista')" type="button">CANCELAR</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+  <footer class="footer">
+    Copyright 2022 - Todos os direitos reservados - Trabalho interdisciplinar Aplicações Web
+  </footer>
+</body>
+
+</html>

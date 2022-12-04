@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Meta tags Obrigatórias -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Go Play - Notificaçao</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="nstyles.css">
+</head>
+
+<body>
+
+
+  <!-- JavaScript (Opcional) -->
+  <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <header class="cabecalho">
+    <aside class="lateral">
+      <input id="check" type="checkbox">
+      <label for="check">
+        <img src="../imgs/hamimg.png" alt="">
+      </label>
+      <nav>
+
+        <ul class="nav-list">
+          <li><a href="../caio/perfil.html"><img height="120px" width="120px" src="../imgs/imgbrlt.png" alt="img"></a>
+          </li>
+          <li><a href="../caio/amigos.html" class="li-amigos">Amigos</a></li>
+          <li><a href="../kenia/mapa.html" class="li-mapa">Mapa</a></li>
+          <li><a href="../lucas/cg.html" class="li-cp">Criar Grupo</a></li>
+          <li><a href="../kenia/qh.html" class="li-qh">Quadro de horários</a></li>
+          <li><a href="../thiago/n.html" class="li-not">Notificações</a></li>
+        </ul>
+
+      </nav>
+    </aside>
+    <div class="container-cabecalho">
+      <ul>
+        <li> <a href="../index.html"><img height="70px" width="60px" src="../imgs/imginicio.png" alt=""></a></li>
+        <li> <a href="../caio/amigos.html"><img height="70px" width="60px" src="../imgs/amigosimg.png" alt=""></a></li>
+        <li> <a href="../lucas/grupos.html"><img height="70px" width="60px" src="../imgs/gruposimg.png" alt=""></a></li>
+        <li> <a href="../caio/perfil.html"><img height="70px" width="60px" src="../imgs/perfilimg.png" alt=""></a></li>
+      </ul>
+    </div>
+
+    <script>window.onload = () => {
+
+
+      }</script>
+  </header>
+  <main>
+    <section>
+      <div class="container">
+        <div class="row">
+          <h2 class="text-center"><span>Notificações</span>
+            <div class="col-md-8 offset-md-2">
+              <div class="bd-example" data-example-id="">
+                <div id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="card">
+                    <div class="card-header" role="tab" id="headingOne">
+                      <div class="mb-0">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
+                          aria-controls="collapseOne" class="collapsed">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          <h3>Julia enviou uma solicitação de amizade</h3>
+                          <p>22 de outubro de 2022</p>
+                        </a>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne"
+                      aria-expanded="false">
+                      <div class="card-block">
+                        <div class="btn">aceitar</div>
+                        <div class="btn">recusar</div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                      <div class="mb-0">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                          aria-controls="collapseOne" class="collapsed">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          <h3>Julia enviou uma mensagem</h3>
+                          <p>22 de outubro de 2022</p>
+                        </a>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo"
+                      aria-expanded="false">
+                      <div class="card-block">
+                        <div class="btn"> responder </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" role="tab" id="headingThree">
+                      <div class="mb-0">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                          aria-controls="collapseOne" class="collapsed">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          <h3>Julia convidou você para participar de um grupo</h3>
+                          <p>22 de outubro de 2022</p>
+                        </a>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree"
+                      aria-expanded="false">
+                      <div class="card-block">
+                        <div class="btn">aceitar</div>
+                        <div class="btn">recusar</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      </div>
+  </main>
+
+</body>
+
+</html>
