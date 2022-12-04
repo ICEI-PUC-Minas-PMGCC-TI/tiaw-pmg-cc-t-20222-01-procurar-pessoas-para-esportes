@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go Play - Grupos</title>
+  <link rel="stylesheet" href="grupos.css">
+  <script src="https://kit.fontawesome.com/4de61c6f75.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <script src="grupos.js"></script>
+  <header class="cabecalho">
+    <aside class="lateral">
+      <input id="check" type="checkbox">
+      <label for="check">
+        <img src="../imgs/hamimg.png" alt="">
+      </label>
+      <nav>
+
+        <ul class="nav-list">
+
+          <li><a href="../caio/perfil.html"><img height="120px" width="120px" src="../imgs/imgbrlt.png" alt="img"></a>
+          </li>
+          <li><a href="../caio/amigos.html" class="li-amigos">Amigos</a></li>
+          <li><a href="../kenia/mapa.html" class="li-mapa">Mapa</a></li>
+          <li><a href="../lucas/cg.html" class="li-cp">Criar Grupo</a></li>
+          <li><a href="../kenia/qh.html" class="li-qh">Quadro de horários</a></li>
+          <li><a href="../thiago/n.html" class="li-not">Notificações</a></li>
+        </ul>
+
+      </nav>
+    </aside>
+    <div class="conteiner">
+      <ul>
+        <li> <a href="../index.html"><img height="70px" width="60px" src="../imgs/imginicio.png" alt=""></a>
+        </li>
+        <li> <a href="../caio/amigos.html"><img height="70px" width="60px" src="../imgs/amigosimg.png" alt=""></a></li>
+        <li> <a href="../lucas/grupos.html"><img height="70px" width="60px" src="../imgs/gruposimg.png" alt=""></a></li>
+        <li> <a href="../caio/perfil.html"><img height="70px" width="60px" src="../imgs/perfilimg.png" alt=""></a></li>
+      </ul>
+    </div>
+
+  </header>
+
+  <style>
+    .body {
+      width: 100%;
+    }
+
+    .tab {
+      display: flex;
+      align-items: center;
+
+
+    }
+
+    .tab input {
+      margin-left: 2rem;
+      height: 2rem;
+      width: 2rem;
+    }
+
+    .container1 {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+      padding-left: 1em;
+      padding-top: 1em;
+    }
+
+    .container1 input {
+      width: 4rem;
+    }
+
+    .container1 table tr {
+      display: flex;
+      height: 4rem;
+      border: solid;
+      padding-left: 5px;
+
+
+    }
+
+    tr td {
+      display: flex;
+      padding-left: 5px;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 800px) {
+
+      table,
+      table tr,
+      table td {
+        display: block;
+        width: 100%;
+      }
+    }
+  </style>
+
+  <main class="container1">
+
+    <div class="tab">
+      <h1>Grupos</h1>
+      <!--<button id="ver"><i class="fa-solid fa-arrow-down"></i></button>-->
+      <input type="button" value="Atualizar" id="ver" class="ver">
+    </div>
+    <div>
+      <table border="1">
+        <tr>
+          <td width="100px">Vitor</td>
+          <td width="200px">Volei de terça</td>
+          <td width="100px">Volei</td>
+          <td width="400px">Toda terça as 19:00 o volei não pode faltar</td>
+        </tr>
+
+        <tr>
+          <td width="100px">Vitor</td>
+          <td width="200px">Basquete de direito</td>
+          <td width="100px">Basquete</td>
+          <td width="400px">Toda segunda e quinta as 17:00 basquete para a turma de direito </td>
+        </tr>
+
+      </table>
+    </div>
+
+
+  </main>
+
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    // alert(urlParams.get('nome') + ' - ' + urlParams.get('nomegp') + ' - ' + urlParams.get('esportes')+ ' - ' + urlParams.get('descricao'))
+
+
+    //definições
+    var btn2 = document.querySelector("#ver");
+    var paragrafo = document.querySelector("#lista");
+    var nome = urlParams.get('nome');
+    var nomegp = urlParams.get('nomegp');
+    var esportes = urlParams.get('esportes');
+    var descricao = urlParams.get('description');
+    if (nome != null){
+      btn2.addEventListener('click', () => {
+        table = document.querySelector('table');
+
+        console.log(`nome ${descricao}`);
+        console.log(`nome ${nome}`);
+        let template = `<tr>
+            <td width="100px">${nome}</td>
+            <td width="200px">${nomegp}</td>
+            <td width="100px">${esportes}</td>
+            <td width="400px">${descricao}</td>
+          </tr>`;
+
+        table.innerHTML += template;
+      })
+    }
+
+  </script>
+
+</body>
+
+</html>
